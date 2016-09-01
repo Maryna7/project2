@@ -1,0 +1,100 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+* {max-height: 1000000px;}
+
+body {
+	color: $base-text-color;
+	background: $base-background-color;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-sans-serif;
+	min-width: $base-min-width;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+p {
+	margin: 0 0 15px;
+}
+
+a {
+	color: $dark-blue;
+	font-weight: bold;
+	transition: color 0.3s ease-in-out;
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+		color:$white;
+	}
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $base-font-sans-serif;
+	margin: 0 0 1em;
+	font-weight: 400;
+}
+h1{
+	font-size: 36px;
+	font-weight: 300;
+	font-style: italic;
+}
+h2{
+	font-size: 18px;
+}
+h3{
+	font-size: 17px;
+}
+h4{
+	font-size: 16px;
+}
+h5{
+	font-size: 15px;
+}
+h6{
+	font-size: 14px;
+}
+
+
+#wrapper{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	margin:0 auto;
+	text-align: left;
+}
+
+.container{
+	width: 100%;
+	max-width: 996px;
+	margin: 0 auto;
+	padding: 0 13px;
+}
+.btn{
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid $dark-blue;
+	color: $dark-blue;
+	font-weight: 700;
+	min-width: 170px;
+	padding: 15px 5px;
+	background-color: transparent;
+	@include animate(background color border-color);
+	&:hover{
+		background:$dark-blue;
+		color: $white;
+		border-color: $white;
+	}
+}
+.white{
+	color:$white;
+	border: 1px solid $white;
+	&:hover{
+		background:rgba(255, 255, 255, 0.2);
+	}
+}

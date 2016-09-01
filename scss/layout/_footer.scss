@@ -1,0 +1,39 @@
+.footer-block{
+	background: #242d36;
+}
+.bottom-nav{
+	min-height: 45px;
+	font-size: 0px;
+	line-height: 0px;
+	@extend %listreset;
+	margin: 0 -10px;
+	color: #555c65;
+	@include media('<=phone') {
+			text-align: left;
+			margin: 0 15px;
+		}
+	li{
+		display: inline-block;
+		font-size: 12px;
+		line-height: 45px;
+		padding: 0 10px;
+		font-weight: 300;
+		@include media('<=tablet') {
+			padding: 0 5px;
+		}
+		@include media('<=phone') {
+			display: block;
+			padding: 5px 0;
+			line-height: 1.2;
+		}
+		a{
+			color: $white;
+			&:hover{
+				color: #555c65;
+			}
+		}
+			.active{
+				color: #555c65;
+			}
+	}
+}
